@@ -1,19 +1,82 @@
 <!doctype html>
 <html>
-    <style>
-h1{
-    text-align: center;
-    font-family: 'Calibri';
-    font-size: 60px;
-}
-    </style>
+<style>
+    body {
+        background: url("https://cdn.pixabay.com/photo/2021/07/15/08/43/abstract-6467847_960_720.png") no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Calibri';
+        font-size: 60px;
+        color: aliceblue;
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+
+    form {
+        background: whitesmoke;
+        opacity: 0.6;
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px 50px;
+    }
+
+    .form-control {
+        background-color: #fff;
+        background-clip: padding-box;
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-family: 'Calibri';
+        font-weight: 700;
+    }
+
+    .form-control label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 95%;
+    }
+
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+    }
+    button {
+            background-color: #fff;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: 'Calibri';
+            font-size: 21px;
+            font-weight: 700;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+</style>
 <header>
-    <title>Survey form
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
 </header>
+
 <body>
     <main>
-        <h1 id="title">Welcome to survey form</h1>
+        <h1 id="title">Welcome to Survey Form</h1>
         <!--dole je form-->
         <form id="form">
             <!--details-->
@@ -22,7 +85,7 @@ h1{
                     Name
                 </label>
                 <!--Input Type Text-->
-                <input type="text" id="name" placeholder="Enter your name"/>
+                <input type="text" id="name" placeholder="Enter your name" />
             </div>
             <div class="form-control">
                 <label for="email" id="label-name">
@@ -38,9 +101,10 @@ h1{
                 <!--Input Type Text-->
                 <input type="text" id="age" placeholder="Enter your age">
             </div>
-            <div id="form-control">
+            <div class="form-control">
                 <label for="role">Current role:</label>
                 <select id="role">
+                    <option label="Select current role" selected="selected">Select current role</option>
                     <option label="Full-time job">Full-time job</option>
                     <option label="Part-time job">Part-time job</option>
                     <option label="Unemployed">Unemployed</option>
@@ -62,7 +126,56 @@ h1{
                     <input type="radio" id="recommend-3" name="recommend">Maybe</input>
                 </label>
             </div>
+            <div class="form-control">
+                <label for="feature">What is your favourite feature </label>
+                <select id="feature">
+                    <option label="Select an option" selected="selected">Select an option</option>
+                    <option label="Challenges">Challenges</option>
+                    <option label="Community">Community</option>
+                    <option label="Projects">Projects</option>
+                    <option label="Open Source">Open Source</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Languages and Frameworks known<small>(Check all that apply)</small></label>
+                <!-- Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox" name="inp">C</input>
+                </label>
+                <label for="inp-2">
+                    <input type="checkbox" name="inp">C++</input>
+                </label>
+                <label for="inp-3">
+                    <input type="checkbox" name="inp">C#</input>
+                </label>
+                <label for="inp-4">
+                    <input type="checkbox" name="inp">Java</input>
+                </label>
+                <label for="inp-5">
+                    <input type="checkbox" name="inp">Javascript</input>
+                </label>
+                <label for="inp-6">
+                    <input type="checkbox" name="inp">Python</input>
+                </label>
+                <label for="inp-7">
+                    <input type="checkbox" name="inp">R</input>
+                </label>
+                <label for="inp-8">
+                    <input type="checkbox" name="inp">Ruby</input>
+                </label>
+            </div>
+            <div class="form-control">
+                <label>Any comments or suggestions</label>
+                <textarea name="comment" id="comment" placeholder="Enter your comment here">
+            </textarea>
+            </div>
+            <button type="submit" value="submit">
+                Submit
+            </button>
+            </div>
         </form>
     </main>
 </body>
+<footer style="text-align: right;">Made by Sanjin Hadžalić</footer>
+</footer>
 </html>
