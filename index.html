@@ -31,7 +31,7 @@ h1{
                 <!--Input Type Text-->
                 <input type="email" id="email" placeholder="Enter your e-mail">
             </div>
-            <div id="form-control">
+            <div class="form-control">
                 <label for="age" id="label-name">
                     Age
                 </label>
@@ -49,7 +49,19 @@ h1{
                     <option label="Prefer not to say">Prefer not to say</option>
                 </select>
             </div>
-
+            <div class="form-control">
+                <label>Would you recommend this Webpage to a friend?</label>
+                <!--below are options to choose...-->
+                <label for="recommend-1">
+                    <input type="radio" id="recommend-1" name="recommend">Yes</input>
+                </label>
+                <label for="recommend-2">
+                    <input type="radio" id="recommend-2" name="recommend">No</input>
+                </label>
+                <label for="recommend-3">
+                    <input type="radio" id="recommend-3" name="recommend">Maybe</input>
+                </label>
+            </div>
         </form>
     </main>
 </body>
